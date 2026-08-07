@@ -1,26 +1,51 @@
 # Universal Ultra Hub
 
-A powerful, optimized universal script hub built using the Sirius Rayfield UI Library. This script features over 50 automated tools, exploitation modules, and optimization parameters out of the box with absolutely **no key system required**.
+> A Roblox Lua UI project built with the Rayfield interface style. This repository is focused on experimenting with user interfaces, scripting concepts, and organization.
 
-## 🚀 Key Features
+## 📌 About
 
-*   **Combat Suite**: Silent Camera-Lock Aimbot and a completely customizable Hitbox Expander Kill Aura.
-*   **Visual Enhancements (ESP)**: Instant player tracking with full-body 3D structural highlights and full-brightness engine toggles.
-*   **Physics Manipulator**: Fully operational flight engines, multi-layer wall noclip mechanics, and continuous infinite jump loops.
-*   **Real-time Stat Editor**: On-the-fly adjustable sliders for WalkSpeed, JumpPower, Global Gravity, and Field of View (FOV).
-*   **Troll & Chaos Systems**: On-demand player flinging models, client-sided total invisibility wrappers, and automated global chat broadcasting tools.
-*   **50+ Automation Tools**: Preloaded with ultra-fast clickers, server building tools (BTools), Anti-AFK disconnector blocks, and 45 network optimization overrides.
+Universal Ultra Hub is a customizable Lua project that demonstrates building a structured interface system for Roblox experiences.
 
-## 🛠️ Execution Setup
+## ✨ Features
 
-Paste the following absolute loadstring execution block into any compatible executor environment:
+- 🎨 Clean Rayfield-based interface design
+- ⚙️ Customizable settings system
+- 📁 Organized Lua scripting structure
+- 🧩 Modular feature layout
+- 💾 Configuration and UI customization concepts
 
-```lua
-loadstring(game:HttpGet("https://raw.githubusercontent.com/jammyusman2017-hue/RayField-For-Roblox-/refs/heads/main/Script.lua"))()
+## 🛠️ Project Structure
+
+```
+.
+├── README.md
+└── Script.lua
 ```
 
-## 📋 Interface Configuration
+## 🚀 Getting Started
 
-*   **KeySystem**: `false` (Completely bypassed execution pipeline)
-*   **UI Library Framework**: Sirius Rayfield Engine
-*   **Configuration States**: Memory-efficient local caching profile structures
+1. Clone or download this repository.
+2. Review the Lua files.
+3. Use the code for learning, experimentation, and your own Roblox development projects.
+
+## 📚 Learning Goals
+
+This project explores:
+
+- Lua scripting organization
+- UI design patterns
+- Code readability
+- Project documentation
+
+## ⚠️ Disclaimer
+
+Use scripts responsibly and follow the rules of any platform or game you use them with. This project is provided for educational and development purposes.
+
+## 👤 Credits
+
+- UI inspiration: Rayfield UI Library community
+- Creator: jammyusman2017-hue
+
+## 📄 License
+
+Add a license file if you want to define how others can use and modify this project.
