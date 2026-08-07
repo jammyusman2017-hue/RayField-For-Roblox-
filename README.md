@@ -16,7 +16,7 @@ A powerful, optimized universal script hub built using the Sirius Rayfield UI Li
 Paste the following absolute loadstring execution block into any compatible executor environment:
 
 ```lua
-https://raw.githubusercontent.com/jammyusman2017-hue/RayField-For-Roblox-/refs/heads/main/Script.lua
+loadstring(game:HttpGet("https://raw.githubusercontent.com/jammyusman2017-hue/RayField-For-Roblox-/refs/heads/main/Script.lua"))()
 ```
 
 ## 📋 Interface Configuration
