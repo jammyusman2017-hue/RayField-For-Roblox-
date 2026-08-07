@@ -48,7 +48,7 @@ Use scripts responsibly and follow the rules of any platform or game you use the
 
 ## 📄 License
 
-LICENSE.md
+https://github.com/jammyusman2017-hue/RayField-For-Roblox-/blob/main/LICENSE.md
 
 
 ## Custom Project License
