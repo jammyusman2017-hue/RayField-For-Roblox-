@@ -2,12 +2,21 @@
 
 > A Roblox Lua UI project focused on interface design, scripting experiments, organization, and learning.
 
-[![Version](https://img.shields.io/badge/version-1.0.0-blue)](CHANGELOG.md)
-[![License](https://img.shields.io/badge/license-custom-lightgrey)](LICENSE.md)
+## 🎮 Project Links
+
+[![Version](https://img.shields.io/badge/VERSION-1.0.0-2ea44f?style=for-the-badge)](CHANGELOG.md)
+[![License](https://img.shields.io/badge/LICENSE-CUSTOM-555555?style=for-the-badge)](LICENSE.md)
+[![Changelog](https://img.shields.io/badge/CHANGELOG-VIEW-6f42c1?style=for-the-badge)](CHANGELOG.md)
+[![Contributing](https://img.shields.io/badge/CONTRIBUTING-GUIDE-0366d6?style=for-the-badge)](CONTRIBUTING.md)
+[![Roadmap](https://img.shields.io/badge/ROADMAP-VIEW-f9a825?style=for-the-badge)](docs/roadmap.md)
+[![Ideas](https://img.shields.io/badge/IDEAS-VIEW-e36209?style=for-the-badge)](docs/ideas.md)
+[![Source](https://img.shields.io/badge/SOURCE-SCR-24292f?style=for-the-badge)](scr/)
+
+---
 
 ## 📌 Overview
 
-**Universal Ultra Hub** is a personal Roblox Lua project created by **jammyusman2017-hue**. The project is used to experiment with UI design, Lua scripting, project organization, and documentation.
+**Universal Ultra Hub** is a personal Roblox Lua project created by **jammyusman2017-hue**. It is used to explore UI design, Lua scripting, project organization, documentation, and controlled development experiments.
 
 This repository is a work in progress. Features, structure, and documentation may change as development continues.
 
@@ -16,9 +25,9 @@ This repository is a work in progress. Features, structure, and documentation ma
 - 🎨 Rayfield-style interface concepts
 - ⚙️ Configurable UI and settings concepts
 - 🧩 Organized scripting structure
-- 📁 Project documentation and version tracking
 - 🧪 Space for experimentation and testing
-- 📚 Focus on learning and improving Lua development
+- 📚 Documentation and version tracking
+- 🧠 Learning-focused development
 
 ## 📂 Project Structure
 
@@ -28,6 +37,10 @@ This repository is a work in progress. Features, structure, and documentation ma
 ├── LICENSE.md
 ├── CHANGELOG.md
 ├── CONTRIBUTING.md
+├── BADGES.md
+├── docs/
+│   ├── roadmap.md
+│   └── ideas.md
 └── scr/
     └── ... project source files ...
 ```
@@ -36,44 +49,45 @@ This repository is a work in progress. Features, structure, and documentation ma
 
 ## 🚀 Getting Started
 
-1. Open or clone this repository.
-2. Read this README and the project documentation.
+1. Open or clone the repository.
+2. Read this README and the linked documentation.
 3. Review the files inside `scr/`.
 4. Make changes in your own development environment.
-5. Test your changes before sharing them.
-
-For development notes and planned work, see the `docs/` directory when available.
+5. Test changes before sharing them.
+6. Keep documentation and changelog entries accurate when making meaningful updates.
 
 ## 🧠 Learning Goals
 
-This project is intended to help explore:
+This project helps explore:
 
 - Lua scripting and code organization
 - UI design patterns
 - Readable and maintainable code
-- Version control with Git and GitHub
+- Git and GitHub workflows
 - Documentation and release management
-- Experimentation in a controlled development environment
+- Testing and iterative development
 
-## 📋 Documentation
+## 📚 Documentation
 
 | Document | Purpose |
 |---|---|
 | [CHANGELOG.md](CHANGELOG.md) | Release history and notable changes |
 | [LICENSE.md](LICENSE.md) | Usage and redistribution rules |
 | [CONTRIBUTING.md](CONTRIBUTING.md) | Contribution and project guidelines |
-| `docs/roadmap.md` | Planned improvements |
-| `docs/ideas.md` | Future ideas and experiments |
+| [BADGES.md](BADGES.md) | Full badge collection and navigation |
+| [docs/roadmap.md](docs/roadmap.md) | Planned improvements |
+| [docs/ideas.md](docs/ideas.md) | Future ideas and experiments |
+| [scr/](scr/) | Project source files |
 
-## ⚠️ Responsible Use
+## 🛡️ Responsible Use
 
-This repository is provided for learning, development, and experimentation. Users are responsible for following Roblox's rules, the rules of individual experiences, and any applicable laws or platform policies.
+This repository is provided for learning, development, and experimentation. Users are responsible for following Roblox's rules, the rules of individual experiences, and applicable laws and platform policies.
 
 Do not use this project to harm other users, bypass security, steal accounts or information, or interfere with services you do not own or have permission to test.
 
 ## 📜 License
 
-This project is distributed under a custom project license. **Reading, viewing, or using the repository does not transfer ownership of the project.**
+This project is distributed under a custom project license. Reading, viewing, or using the repository does not transfer ownership of the project.
 
 See [LICENSE.md](LICENSE.md) for the complete terms.
 
@@ -88,14 +102,14 @@ If you feature this project in a video, post, tutorial, or review, please provid
 - **Creator:** jammyusman2017-hue
 - **UI inspiration / dependency:** Rayfield community and related open-source work, where applicable
 
-If a third-party library or asset is used in a specific file, its original license and attribution should be respected.
+Third-party libraries, assets, and code remain subject to their own licenses and attribution requirements.
 
 ## 📈 Project Status
 
 **Current version:** `1.0.0`  
 **Status:** 🚧 In development
 
-See [CHANGELOG.md](CHANGELOG.md) for the latest documented changes.
+See [CHANGELOG.md](CHANGELOG.md) for documented changes.
 
 ---
 
