@@ -4,7 +4,7 @@
 
 ## 🎮 Project Links
 
-[![Version](https://img.shields.io/badge/VERSION-1.0.0-2ea44f?style=for-the-badge)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/VERSION-1.1.2-2ea44f?style=for-the-badge)](CHANGELOG.md)
 [![License](https://img.shields.io/badge/LICENSE-CUSTOM-555555?style=for-the-badge)](LICENSE.md)
 [![Changelog](https://img.shields.io/badge/CHANGELOG-VIEW-6f42c1?style=for-the-badge)](CHANGELOG.md)
 [![Contributing](https://img.shields.io/badge/CONTRIBUTING-GUIDE-0366d6?style=for-the-badge)](CONTRIBUTING.md)
@@ -106,7 +106,7 @@ Third-party libraries, assets, and code remain subject to their own licenses and
 
 ## 📈 Project Status
 
-**Current version:** `1.0.0`  
+**Current version:** `1.1.2`  
 **Status:** 🚧 In development
 
 See [CHANGELOG.md](CHANGELOG.md) for documented changes.
