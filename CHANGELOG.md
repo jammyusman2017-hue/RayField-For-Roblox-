@@ -6,7 +6,7 @@ The changelog is organized by version so changes, fixes, additions, and improvem
 
 ---
 
-## 🔵 [1.1.0] — Documentation & Organization Update
+## 🔵 [1.1.2] — Documentation & Organization Update
 
 ### ✨ Added
 - Added `CONTRIBUTING.md` with contribution guidelines.
