@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guest Pin Board & Admin Announcements</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card-bg: #1e293b;
+      --accent: #6366f1;
+      --accent-hover: #4f46e5;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 800px;
+      background-color: var(--card-bg);
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    h1, h2, h3 {
+      margin-bottom: 16px;
+    }
+
+    .auth-box {
+      max-width: 400px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+      text-align: left;
+    }
+
+    label {
+      display: block;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(0,0,0,0.2);
+      color: var(--text);
+      font-size: 1rem;
+    }
+
+    button.btn-primary {
+      width: 100%;
+      padding: 12px;
+      background: var(--accent);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    button.btn-primary:hover {
+      background: var(--accent-hover);
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding-bottom: 16px;
+      margin-bottom: 24px;
+    }
+
+    .user-tag {
+      display: inline-block;
+      padding: 4px 10px;
+      background: rgba(245, 158, 11, 0.2);
+      color: #f59e0b;
+      border-radius: 20px;
+      font-size: 0.85rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 16px;
+    }
+
+    .announcement-card {
+      border-left: 4px solid var(--accent);
+      background: rgba(99, 102, 241, 0.05);
+      margin-bottom: 16px;
+    }
+
+    .badge {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--accent);
+      font-weight: bold;
+    }
+
+    .author {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- GUEST SETUP SCREEN -->
+    <div id="auth-screen" class="auth-box">
+      <h2>Welcome Guest!</h2>
+      <p style="color: var(--text-muted); margin-bottom: 20px;">Pick a name to start pinning ideas</p>
+
+      <form onsubmit="handleGuest(event)">
+        <div class="form-group">
+          <label for="guest-name">Your Display Name</label>
+          <input type="text" id="guest-name" placeholder="e.g. CoolPlayer" required>
+        </div>
+        <button type="submit" class="btn-primary">Enter App</button>
+      </form>
+    </div>
+
+    <!-- MAIN DASHBOARD SCREEN -->
+    <div id="dashboard-screen" class="hidden">
+      <div class="header">
+        <div>
+          <h2 id="welcome-text">Dashboard</h2>
+          <span class="user-tag">[GUEST]</span>
+        </div>
+        <button onclick="logout()" style="background: none; border: none; color: var(--text-muted); cursor: pointer;">Change Name</button>
+      </div>
+
+      <!-- ANNOUNCEMENT CREATOR (EVERYONE SEES, BUT NEEDS SECRET PASS) -->
+      <div style="margin-bottom: 30px; background: rgba(255,255,255,0.02); padding: 16px; border-radius: 12px;">
+        <h3>📢 Post Announcement</h3>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px;">Jammy secret password required to publish!</p>
+        <div class="form-group">
+          <input type="text" id="announcement-title" placeholder="Title" style="margin-bottom: 10px;">
+          <textarea id="announcement-body" rows="2" placeholder="Announcement text..."></textarea>
+        </div>
+        <button onclick="addAnnouncement()" class="btn-primary" style="width: auto; padding: 10px 20px;">Publish Announcement</button>
+      </div>
+
+      <!-- ANNOUNCEMENTS BOARD -->
+      <h3>📢 Announcements</h3>
+      <div id="announcements-container"></div>
+
+      <!-- PIN IDEAS SECTION -->
+      <div style="margin-top: 30px;">
+        <h3>📌 Guest Pin Board</h3>
+        <div class="form-group" style="display: flex; gap: 10px; margin-top: 10px;">
+          <input type="text" id="pin-input" placeholder="Share an idea...">
+          <button onclick="addPin()" class="btn-primary" style="width: 120px;">Pin It</button>
+        </div>
+        <div id="pins-grid" class="grid"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    const SECRET_PASSWORD = "supercalifragilisticexpialidocious jammy only knows this";
+    let guestName = "";
+
+    let announcements = [
+      { title: "Welcome Guests!", text: "Anyone can post pins! Announcements are locked to Jammy.", author: "Jammy" }
+    ];
+    
+    let pins = [
+      { text: "Build a game inside here 🎮", author: "Gamer_99 [GUEST]" },
+      { text: "Add custom avatars!", author: "PixelCoder [GUEST]" }
+    ];
+
+    function handleGuest(e) {
+      e.preventDefault();
+      guestName = document.getElementById('guest-name').value.trim();
+
+      document.getElementById('auth-screen').classList.add('hidden');
+      document.getElementById('dashboard-screen').classList.remove('hidden');
+      document.getElementById('welcome-text').textContent = `Hey, ${guestName}!`;
+
+      renderAnnouncements();
+      renderPins();
+    }
+
+    function addAnnouncement() {
+      const title = document.getElementById('announcement-title').value.trim();
+      const text = document.getElementById('announcement-body').value.trim();
+
+      if (!title || !text) {
+        alert('Please fill out both the title and text!');
+        return;
+      }
+
+      // Secret password prompt
+      const inputPass = prompt("Enter the Jammy secret password:");
+
+      if (inputPass === SECRET_PASSWORD) {
+        announcements.unshift({ title, text, author: "Jammy" });
+        document.getElementById('announcement-title').value = '';
+        document.getElementById('announcement-body').value = '';
+        renderAnnouncements();
+        alert("Announcement posted! 🔥");
+      } else {
+        alert("Wrong password ❌!");
+      }
+    }
+
+    function renderAnnouncements() {
+      const container = document.getElementById('announcements-container');
+      container.innerHTML = announcements.map(a => `
+        <div class="card announcement-card">
+          <div class="badge">Official Announcement</div>
+          <h4 style="margin: 6px 0;">${a.title}</h4>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">${a.text}</p>
+          <div class="author">By ${a.author}</div>
+        </div>
+      `).join('');
+    }
+
+    function addPin() {
+      const input = document.getElementById('pin-input');
+      if (!input.value.trim()) return;
+
+      pins.unshift({ text: input.value.trim(), author: `${guestName} [GUEST]` });
+      input.value = '';
+      renderPins();
+    }
+
+    function renderPins() {
+      const grid = document.getElementById('pins-grid');
+      grid.innerHTML = pins.map(p => `
+        <div class="card">
+          <p>${p.text}</p>
+          <div class="author">— ${p.author}</div>
+        </div>
+      `).join('');
+    }
+
+    function logout() {
+      document.getElementById('dashboard-screen').classList.add('hidden');
+      document.getElementById('auth-screen').classList.remove('hidden');
+      document.getElementById('guest-name').value = '';
+    }
+  </script>
+</body>
+</html>
