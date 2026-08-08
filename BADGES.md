@@ -8,7 +8,7 @@ These badges are designed to provide quick navigation around the repository whil
 
 ## 🎮 Main Navigation
 
-[![Version](https://img.shields.io/badge/VERSION-1.1.0-2ea44f?style=for-the-badge)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/VERSION-1.1.2-2ea44f?style=for-the-badge)](CHANGELOG.md)
 
 [![License](https://img.shields.io/badge/LICENSE-CUSTOM-555555?style=for-the-badge)](LICENSE.md)
 
