@@ -1,74 +1,102 @@
 # Universal Ultra Hub
 
-> A Roblox Lua UI project built with the Rayfield interface style. This repository is focused on experimenting with user interfaces, scripting concepts, and organization.
+> A Roblox Lua UI project focused on interface design, scripting experiments, organization, and learning.
 
-## 📌 About
+[![Version](https://img.shields.io/badge/version-1.0.0-blue)](CHANGELOG.md)
+[![License](https://img.shields.io/badge/license-custom-lightgrey)](LICENSE.md)
 
-Universal Ultra Hub is a customizable Lua project that demonstrates building a structured interface system for Roblox experiences.
+## 📌 Overview
 
-## ✨ Features
+**Universal Ultra Hub** is a personal Roblox Lua project created by **jammyusman2017-hue**. The project is used to experiment with UI design, Lua scripting, project organization, and documentation.
 
-- 🎨 Clean Rayfield-based interface design
-- ⚙️ Customizable settings system
-- 📁 Organized Lua scripting structure
-- 🧩 Modular feature layout
-- 💾 Configuration and UI customization concepts
+This repository is a work in progress. Features, structure, and documentation may change as development continues.
 
-## 🛠️ Project Structure
+## ✨ Highlights
 
-```
+- 🎨 Rayfield-style interface concepts
+- ⚙️ Configurable UI and settings concepts
+- 🧩 Organized scripting structure
+- 📁 Project documentation and version tracking
+- 🧪 Space for experimentation and testing
+- 📚 Focus on learning and improving Lua development
+
+## 📂 Project Structure
+
+```text
 .
 ├── README.md
-└── Script.lua
+├── LICENSE.md
+├── CHANGELOG.md
+├── CONTRIBUTING.md
+└── scr/
+    └── ... project source files ...
 ```
+
+> The contents of `scr/` may change as the project develops.
 
 ## 🚀 Getting Started
 
-1. Clone or download this repository.
-2. Review the Lua files.
-3. Use the code for learning, experimentation, and your own Roblox development projects.
+1. Open or clone this repository.
+2. Read this README and the project documentation.
+3. Review the files inside `scr/`.
+4. Make changes in your own development environment.
+5. Test your changes before sharing them.
 
-## 📚 Learning Goals
+For development notes and planned work, see the `docs/` directory when available.
 
-This project explores:
+## 🧠 Learning Goals
 
-- Lua scripting organization
+This project is intended to help explore:
+
+- Lua scripting and code organization
 - UI design patterns
-- Code readability
-- Project documentation
+- Readable and maintainable code
+- Version control with Git and GitHub
+- Documentation and release management
+- Experimentation in a controlled development environment
 
-## ⚠️ Disclaimer
+## 📋 Documentation
 
-Use scripts responsibly and follow the rules of any platform or game you use them with. This project is provided for educational and development purposes.
+| Document | Purpose |
+|---|---|
+| [CHANGELOG.md](CHANGELOG.md) | Release history and notable changes |
+| [LICENSE.md](LICENSE.md) | Usage and redistribution rules |
+| [CONTRIBUTING.md](CONTRIBUTING.md) | Contribution and project guidelines |
+| `docs/roadmap.md` | Planned improvements |
+| `docs/ideas.md` | Future ideas and experiments |
 
-## 👤 Credits
+## ⚠️ Responsible Use
 
-- UI inspiration: Rayfield UI Library community
-- Creator: jammyusman2017-hue
+This repository is provided for learning, development, and experimentation. Users are responsible for following Roblox's rules, the rules of individual experiences, and any applicable laws or platform policies.
 
-## 📄 License
+Do not use this project to harm other users, bypass security, steal accounts or information, or interfere with services you do not own or have permission to test.
 
-https://github.com/jammyusman2017-hue/RayField-For-Roblox-/blob/main/LICENSE.md
+## 📜 License
 
+This project is distributed under a custom project license. **Reading, viewing, or using the repository does not transfer ownership of the project.**
 
-## Custom Project License
-Copyright (c) 2026 jammyusman2017-hue
+See [LICENSE.md](LICENSE.md) for the complete terms.
 
-## You CAN:
-Use this project for personal learning and private use.
-Show this project in videos, reviews, or tutorials as long as credit is given.
-Modify the project for your own private experiments.
+## 👤 Author
 
-## You CANNOT:
-Re-upload this project as your own.
-Claim you created this project.
-Remove credits from the original creator.
-Sell this project or use it for profit without permission.
-Redistribute modified or copied versions without permission.
-Credit
-If you use this project in a video, post, or tutorial, please credit:
+**jammyusman2017-hue**
 
-# Created by: jammyusman2017-hue
+If you feature this project in a video, post, tutorial, or review, please provide clear credit to the original creator.
 
-## Important Note
-This project is shared for learning and development purposes. By using this project, you agree to respect the creator's rules above.
+## 🙏 Credits
+
+- **Creator:** jammyusman2017-hue
+- **UI inspiration / dependency:** Rayfield community and related open-source work, where applicable
+
+If a third-party library or asset is used in a specific file, its original license and attribution should be respected.
+
+## 📈 Project Status
+
+**Current version:** `1.0.0`  
+**Status:** 🚧 In development
+
+See [CHANGELOG.md](CHANGELOG.md) for the latest documented changes.
+
+---
+
+> Made with Lua, GitHub, and a lot of experimenting. 🚀
